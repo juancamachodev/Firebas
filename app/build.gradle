@@ -71,13 +71,17 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
     implementation "androidx.lifecycle:lifecycle-runtime-compose:2.6.2"
 
+    //Dagger-Hilt inyeccion de dependencias
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation("androidx.work:work-runtime-ktx:2.8.1")
     implementation("com.google.dagger:hilt-android:2.44")
     implementation("androidx.hilt:hilt-work:1.0.0")
-
     kapt("androidx.hilt:hilt-compiler:1.0.0")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+    //Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+    implementation("com.google.firebase:firebase-auth-ktx")
 
 }
 
