@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
@@ -29,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = '17'
     }
     buildFeatures {
         compose true
@@ -75,8 +76,9 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 
     //Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
-    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation platform('com.google.firebase:firebase-bom:32.5.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-analytics'
 
 }
 
