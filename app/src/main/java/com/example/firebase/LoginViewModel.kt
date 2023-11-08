@@ -20,7 +20,7 @@ class LoginViewModel @Inject constructor(): ViewModel() {
     val firebase: FirebaseAuth = Firebase.auth
     val email: MutableState<String> = mutableStateOf("")
     val password: MutableState<String> = mutableStateOf("")
-
+    val loadig: MutableState<Boolean> = mutableStateOf(false)
     fun createAccount(email: String, password: String) {
         firebase.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
             if (it.isSuccessful) {
