@@ -1,5 +1,6 @@
 package com.example.firebase
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -26,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -45,7 +47,6 @@ fun LoginView(viewModel: LoginViewModel.DataLogin) {
     val context = LocalContext.current
 
     Scaffold(
-        containerColor = Color.White,
         bottomBar = {
 
         },
@@ -164,6 +165,9 @@ fun LoginView(viewModel: LoginViewModel.DataLogin) {
 }
 
 @Preview()
+@Preview(uiMode = UI_MODE_NIGHT_YES)
+@Preview(device = Devices.AUTOMOTIVE_1024p)
+@Preview(device = Devices.AUTOMOTIVE_1024p, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun Preview() {
     FirebaseTheme {
