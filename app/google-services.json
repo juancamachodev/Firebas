@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "885557720911",
+    "project_id": "cursofirebase-f814d",
+    "storage_bucket": "cursofirebase-f814d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885557720911:android:91bc3b186dd04f1a66773a",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCETyjaEpFBQSZWjaip54GrPuV3uWd-zQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
