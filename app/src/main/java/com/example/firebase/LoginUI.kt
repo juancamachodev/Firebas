@@ -73,7 +73,9 @@ fun LoginView(viewModel: LoginViewModel.DataLogin) {
                         Image(
                             painter = painterResource(id = R.drawable.udg),
                             contentDescription = null,
-                            modifier = Modifier.size(180.dp).align(CenterHorizontally)
+                            modifier = Modifier
+                                .size(180.dp)
+                                .align(CenterHorizontally)
                         )
 
                         Spacer(modifier = Modifier.size(40.dp))
@@ -131,7 +133,10 @@ fun LoginView(viewModel: LoginViewModel.DataLogin) {
                     Column(modifier = Modifier.align(Alignment.BottomEnd)) {
                         Button(
                             onClick = {
-
+                                viewModel.createAccount(
+                                    email = viewModel.email.value,
+                                    password = viewModel.password.value
+                                )
                             },
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -165,9 +170,9 @@ fun LoginView(viewModel: LoginViewModel.DataLogin) {
 }
 
 @Preview()
-@Preview(uiMode = UI_MODE_NIGHT_YES)
-@Preview(device = Devices.AUTOMOTIVE_1024p)
-@Preview(device = Devices.AUTOMOTIVE_1024p, uiMode = UI_MODE_NIGHT_YES)
+//@Preview(uiMode = UI_MODE_NIGHT_YES)
+//@Preview(device = Devices.AUTOMOTIVE_1024p)
+//@Preview(device = Devices.AUTOMOTIVE_1024p, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun Preview() {
     FirebaseTheme {
