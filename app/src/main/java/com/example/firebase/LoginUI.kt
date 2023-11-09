@@ -40,6 +40,16 @@ fun LoginUI() {
     LoginView(viewModel = viewModel.dataLogin)
 }
 
+@Composable
+fun ImageLogo() {
+    Image(
+        painter = painterResource(id = R.drawable.udg),
+        contentDescription = null,
+        modifier = Modifier
+            .size(180.dp)
+    )
+}
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -70,13 +80,7 @@ fun LoginView(viewModel: LoginViewModel.DataLogin) {
                 Box(modifier = Modifier.weight(3f)) {
                     Column(modifier = Modifier.align(Alignment.Center)) {
 
-                        Image(
-                            painter = painterResource(id = R.drawable.udg),
-                            contentDescription = null,
-                            modifier = Modifier
-                                .size(180.dp)
-                                .align(CenterHorizontally)
-                        )
+                        ImageLogo()
 
                         Spacer(modifier = Modifier.size(40.dp))
 
@@ -170,9 +174,9 @@ fun LoginView(viewModel: LoginViewModel.DataLogin) {
 }
 
 @Preview()
-//@Preview(uiMode = UI_MODE_NIGHT_YES)
-//@Preview(device = Devices.AUTOMOTIVE_1024p)
-//@Preview(device = Devices.AUTOMOTIVE_1024p, uiMode = UI_MODE_NIGHT_YES)
+@Preview(uiMode = UI_MODE_NIGHT_YES)
+@Preview(device = Devices.AUTOMOTIVE_1024p)
+@Preview(device = Devices.AUTOMOTIVE_1024p, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun Preview() {
     FirebaseTheme {
